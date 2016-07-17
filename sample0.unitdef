@@ -1,0 +1,49 @@
+unit=XXXX0000,0000,BBBBB,CCCCC;
+{
+	ty=n;
+	el=XXXX0001,g,+80 +48;
+	el=XXXX0002,g,+240 +144;
+	ar=(f=XXXX0001,t=XXXX0002);
+	ar=(f=XXXX0002,t=XXXX0001,con);
+	cm="これはコメントです。";
+	xx=ABCDEF,ABC123,HAS SPACE,"QUOTED STRING",123456,2013/01/01,00:00,();
+	fd=360;
+	ha=n;
+	unit=XXXX0001,0001,BBBBB,CCCCC;
+	{
+		ty=n;
+		cm="これはコメントです。";
+		fd=120;
+		ha=y;
+		unit=XXXX0001,0001,BBBBB,CCCCC;
+		{
+			ty=g;
+			cm="これはコメントです。";
+			unit=XXXX0001,0001,BBBBB,CCCCC;
+			{
+				ty=g;
+				cm="これはコメントです。";
+			}
+		}
+		unit=XXXX0002,0002,BBBBB,CCCCC;
+		{
+			ty=g;
+			cm="これはコメントです。";
+		}
+	}
+	unit=XXXX0002,0002,BBBBB,CCCCC;
+	{
+		ty=n;
+		cm="これはコメントです。";
+		unit=XXXX0001,0001,BBBBB,CCCCC;
+		{
+			ty=g;
+			cm="これはコメントです。";
+		}
+		unit=XXXX0002,0002,BBBBB,CCCCC;
+		{
+			ty=g;
+			cm="これはコメントです。";
+		}
+	}
+}
