@@ -28,7 +28,6 @@
 		</dependency>
 	</dependencies>
 
-	<!-- Package as an executable jar -->
 	<build>
 		<finalName>jp1ajs2.findunit</finalName>
 		<plugins>
@@ -75,6 +74,45 @@
 					</execution>
 				</executions>
 			</plugin>
+	        <plugin>
+				<groupId>com.akathist.maven.plugins.launch4j</groupId>
+				<artifactId>launch4j-maven-plugin</artifactId>
+				<version>1.7.10</version>
+				<executions>
+					<execution>
+						<id>l4j-clui</id>
+						<phase>package</phase>
+						<goals>
+							<goal>launch4j</goal>
+						</goals>
+						<configuration>
+							<headerType>console</headerType>
+							<outfile>target/jp1ajs2.findunit.exe</outfile>
+							<jar>target/jp1ajs2.findunit-jar-with-dependencies.jar</jar>
+							<errTitle>jp1ajs2.findunit</errTitle>
+							<classPath>
+								<mainClass>org.unclazz.jp1ajs2.findunit.Main</mainClass>
+								<addDependencies>true</addDependencies>
+								<preCp>anything</preCp>
+							</classPath>
+							<jre>
+								<minVersion>1.8.0</minVersion>
+							</jre>
+							<versionInfo>
+								<fileVersion>1.0.0.0</fileVersion>
+								<txtFileVersion>1.0.0.0</txtFileVersion>
+								<fileDescription>jp1ajs2.findunit</fileDescription>
+								<copyright>(C) 2016 unclazz.org.</copyright>
+								<productVersion>1.0.0.0</productVersion>
+								<txtProductVersion>1.0.0.0</txtProductVersion>
+								<productName>jp1ajs2.findunit</productName>
+								<internalName>jp1ajs2.findunit</internalName>
+								<originalFilename>jp1ajs2.findunit.exe</originalFilename>
+							</versionInfo>
+						</configuration>
+					</execution>
+				</executions>
+	        </plugin>
 		</plugins>
 	</build>
 	
